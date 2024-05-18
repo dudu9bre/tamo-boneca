@@ -10,20 +10,16 @@ $(document).ready(function () {
     })
 })
 
-// document.addEventListener("scroll", function() {
-//     if (window.scrollY > 500 && window.scrollY < 1200) {
-//         document.body.classList.add("scrolled")
-//         document.body.classList.remove("scrolled2")
-//     } else if (window.scrollY > 1200) {
-//         document.body.classList.add("scrolled2")
-//     } else {
-//         document.body.classList.remove("scrolled")
-//         document.body.classList.remove("scrolled2")
-//     }
-// })
+document.addEventListener("scroll", function() {
+    if (window.scrollY > 500) {
+        document.body.classList.add("scrolled")
+    } else {
+        document.body.classList.remove("scrolled")
+    }
+})
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() > 100) {
+    if ($(window).scrollTop() > 1500) {
         let iframe = $('<iframe class="iframe" src="flores.html" frameborder="0"></iframe>')
         $('body').append(iframe)
         $(window).off('scroll')
